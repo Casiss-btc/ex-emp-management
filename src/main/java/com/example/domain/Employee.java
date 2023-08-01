@@ -1,4 +1,4 @@
-package main.java.com.example.domain;
+package com.example.domain;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ public class Employee {
     private String name;
     private String image;
     private String gender;
-    private java.util.Date hirDate;
+    private java.util.Date hireDate;
     private String mailAddress;
     private String zipCode;
     private String address;
@@ -17,14 +17,14 @@ public class Employee {
     private Integer dependentsCount;
     public Employee() {
     }
-    public Employee(Integer id, String name, String image, String gender, Date hirDate, String mailAddress,
+    public Employee(Integer id, String name, String image, String gender, Date hireDate, String mailAddress,
             String zipCode, String address, String telephone, Integer salary, String characteristics,
             Integer dependentsCount) {
         this.id = id;
         this.name = name;
         this.image = image;
         this.gender = gender;
-        this.hirDate = hirDate;
+        this.hireDate = hireDate;
         this.mailAddress = mailAddress;
         this.zipCode = zipCode;
         this.address = address;
@@ -57,11 +57,11 @@ public class Employee {
     public void setGender(String gender) {
         this.gender = gender;
     }
-    public java.util.Date getHirDate() {
-        return hirDate;
+    public java.util.Date getHireDate() {
+        return hireDate;
     }
-    public void setHirDate(java.util.Date hirDate) {
-        this.hirDate = hirDate;
+    public void setHireDate(java.util.Date hireDate) {
+        this.hireDate = hireDate;
     }
     public String getMailAddress() {
         return mailAddress;
@@ -107,8 +107,8 @@ public class Employee {
     }
     @Override
     public String toString() {
-        return "Employee [id=" + id + ", name=" + name + ", image=" + image + ", gender=" + gender + ", hirDate="
-                + hirDate + ", mailAddress=" + mailAddress + ", zipCode=" + zipCode + ", address=" + address
+        return "Employee [id=" + id + ", name=" + name + ", image=" + image + ", gender=" + gender + ", hireDate="
+                + hireDate + ", mailAddress=" + mailAddress + ", zipCode=" + zipCode + ", address=" + address
                 + ", telephone=" + telephone + ", salary=" + salary + ", characteristics=" + characteristics
                 + ", dependentsCount=" + dependentsCount + "]";
     }
