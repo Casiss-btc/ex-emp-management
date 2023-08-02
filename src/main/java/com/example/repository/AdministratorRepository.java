@@ -24,7 +24,7 @@ public class AdministratorRepository {
         return administrator;
      };
     public void insert(Administrator administrator) {
-        String sql = "INSERT INTO administrators (id, name, mail_address, password) VALUES (:id, :name, :mailAddress, :password)";
+        String sql = "INSERT INTO administrators (name, mail_address, password) VALUES (:name, :mailAddress, :password)";
         
         Integer id = administrator.getId();
         String name = administrator.getName();

@@ -25,6 +25,6 @@ public class AdministratorController {
         Administrator administrator = new Administrator();
         BeanUtils.copyProperties(form, administrator);
         administratorService.insert(administrator);
-        return "redirect: /";
+        return "redirect:/";
     }
 }
