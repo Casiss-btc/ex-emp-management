@@ -33,9 +33,10 @@ public class AdministratorRepository {
         SqlParameterSource param = new MapSqlParameterSource().addValue("id",id).addValue("name",name).addValue("mailAddress",mail_address).addValue("password",password);
         template.update(sql, param);
     }
-    public Administrator findByMailAddressAddPassword(String mailAddress,String password) {
+    public Administrator findByMailAddressAndPassword(String mailAddress,String password) {
         String sql = "SELECT * FROM administrators WHERE mail_address = :mailAddress AND password = :password";
-        List<Administrator> administratorList = template.query(sql, ADMINISTRATOR_ROW_MAPPER);
+        SqlParameterSource param = new MapSqlParameterSource().addValue("mailAddress",mailAddress).addValue("password", password);
+        List<Administrator> administratorList = template.query(sql, param, ADMINISTRATOR_ROW_MAPPER);
         if(administratorList.size()==0) {
             return null;
         }
