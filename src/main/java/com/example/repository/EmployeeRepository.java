@@ -36,19 +36,20 @@ public class EmployeeRepository {
         "name = :name, "+
         "image = :image, "+
         "gender = :gender, "+
-        "hire_date = :hireDate "+
+        "hire_date = :hireDate, "+
         "mail_address = :mailAddress, "+
         "zip_code = :zipCode, "+
         "address = :address, "+
         "telephone = :telephone, "+
         "salary = :salary, "+
         "characteristics = :characteristics, "+
-        "dependents_count = :dependentsCount, "+
+        "dependents_count = :dependentsCount "+
         "WHERE id = :id";
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("id", employee.getId()); // 主キーで指定
         paramMap.put("name", employee.getName());
-        paramMap.put("name", employee.getName());
+        paramMap.put("image", employee.getImage());
+        paramMap.put("gender", employee.getGender());
         paramMap.put("hireDate", employee.getHireDate());
         paramMap.put("mailAddress", employee.getMailAddress());
         paramMap.put("zipCode", employee.getZipCode());
